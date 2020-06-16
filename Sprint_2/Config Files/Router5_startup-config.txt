@@ -1,0 +1,105 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname BC-Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.645
+ encapsulation dot1Q 645
+ ip address 10.168.184.3 255.255.255.128
+!
+interface FastEthernet0/0.658
+ encapsulation dot1Q 658
+ ip address 10.168.181.129 255.255.255.192
+!
+interface FastEthernet0/0.659
+ encapsulation dot1Q 659
+ ip address 10.168.181.65 255.255.255.192
+!
+interface FastEthernet0/0.660
+ encapsulation dot1Q 660
+ ip address 10.168.181.1 255.255.255.192
+!
+interface FastEthernet0/0.661
+ encapsulation dot1Q 661
+ ip address 10.168.180.1 255.255.255.0
+!
+interface FastEthernet0/0.662
+ encapsulation dot1Q 662
+ ip address 10.168.181.193 255.255.255.192
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+!
+ip classless
+ip route 10.168.176.0 255.255.254.0 10.168.184.1 
+ip route 10.168.178.0 255.255.254.0 10.168.184.2 
+ip route 10.168.182.0 255.255.254.0 10.168.184.4 
+ip route 0.0.0.0 0.0.0.0 10.168.184.5 
+!
+ip flow-export version 9
+!
+!
+!
+no cdp run
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
