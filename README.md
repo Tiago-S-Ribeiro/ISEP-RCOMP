@@ -5,6 +5,8 @@ Resolution of RCOMP Sprints.
 
 Each Sprint has a respective statement on 'Statements' folder.
 
+RCOMP project is developed as a group, my part was the building C. Each Sprint is described below in detail.
+
 --------------------------------
 
 ## Building C ##
