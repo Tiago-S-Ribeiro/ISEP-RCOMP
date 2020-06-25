@@ -503,9 +503,3 @@ The HTML has a couple additions to make it more pleasing.
 	- **BC-Router(config)#** ip nat inside source static udp 10.168.180.2 53 10.168.184.3 53
 
 -------------------------------------------------------------------
-
-#### ICMP Tests
-
-The following images show the successfull connectivity tests done between devices where a ping command was made from the Floor 0 to every other device on the network, showing this way that every device is reachable.
-
--------------------------------------------------------------------
